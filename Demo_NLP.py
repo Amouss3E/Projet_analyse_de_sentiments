@@ -42,7 +42,7 @@ def clean_text(text):
     return ' '.join(tokens)
 
 # Charger le modèle entraîné et le vectoriseur
-model = joblib.load('LGBMClassifier_model.pkl')
+model = joblib.load('LGBMClassifier.pkl')
 vectorizer = joblib.load('tfidf_vectorizer_LGBMC.pkl')
 
 # Interface Streamlit
