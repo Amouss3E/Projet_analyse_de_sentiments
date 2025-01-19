@@ -22,8 +22,12 @@ nltk.data.path.append(nltk_data_dir)
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
-    nltk.download('punkt_tab', download_dir=nltk_data_dir),
     nltk.download('punkt', download_dir=nltk_data_dir)
+
+try:
+    nltk.data.find('tokenizers/punkt/PY3/french.pickle')  # Vérifie la présence de punkt_tab pour le français
+except LookupError:
+    nltk.download('punkt_tab', download_dir=nltk_data_dir)
 
 try:
     nltk.data.find('corpora/stopwords')
