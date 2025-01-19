@@ -48,6 +48,12 @@ vectorizer = joblib.load('tfidf_vectorizer_LGBMC.pkl')
 # Interface Streamlit
 st.title("Démonstration de prédiction de sentiment")
 
+# Afficher les noms des membres de l'équipe
+st.write("**Membres de l'équipe :**")
+st.write("- AMOUSSOU Eli Enock Emalin")
+st.write("- DOHOUN Amoin Maeva")
+st.write("- YEO Ditchaba")
+
 # Description des données d'entraînement
 st.write("""
 **Description des données d'entraînement :**
@@ -57,16 +63,9 @@ L'ensemble de données utilisé pour l'entraînement de notre modèle contient p
 # Exemples de textes par label et par langue
 st.write("""
 **Exemples de textes :**
-
-**Français :**
 - **Negative** : "Le service était lent et la nourriture était froide."
 - **Neutral** : "Le restaurant était propre, mais la nourriture était moyenne."
 - **Positive** : "Ce restaurant était propre et le service était rapide."
-
-**Anglais :**
-- **Negative** : "The food was cold and the service was terrible."
-- **Neutral** : "The restaurant was clean, but the food was average."
-- **Positive** : "I loved this place! The food was delicious and the staff was friendly."
 """)
 
 # Entrée utilisateur
