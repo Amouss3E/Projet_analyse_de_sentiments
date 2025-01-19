@@ -10,11 +10,24 @@ from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 import joblib
 import matplotlib.pyplot as plt
+import nltk
+import os
 
-# Télécharger les stopwords de NLTK
-nltk.download('punkt_tab')
-nltk.download('punkt')
-nltk.download('stopwords')
+# Configurer un répertoire personnalisé pour NLTK
+nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
+os.makedirs(nltk_data_dir, exist_ok=True)
+nltk.data.path.append(nltk_data_dir)
+
+# Télécharger les ressources nécessaires
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', download_dir=nltk_data_dir)
+
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords', download_dir=nltk_data_dir)
 
 # Nettoyage du texte
 stop_words = set(stopwords.words('english'))  # Liste des stopwords standard
