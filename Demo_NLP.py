@@ -25,7 +25,7 @@ except LookupError:
     nltk.download('punkt', download_dir=nltk_data_dir)
 
 try:
-    nltk.data.find('tokenizers/punkt/PY3/french.pickle')  # Vérifie la présence de punkt_tab pour le français
+    nltk.data.find('tokenizers/punkt_tab')  # Vérifie la présence de punkt_tab pour le français
 except LookupError:
     nltk.download('punkt_tab', download_dir=nltk_data_dir)
 
