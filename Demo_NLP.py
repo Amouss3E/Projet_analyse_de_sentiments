@@ -82,13 +82,19 @@ if st.button("Prédire le sentiment"):
         try:
             # Détecter la langue du texte avec langdetect
             detected_lang = detect(user_input)
-            st.write(f"Langue détectée : {detected_lang}")
+            lang1 = 'Français'
+            lang2 = 'Englais'
+            if detected_lang == 'fr':
+                st.write(f"Langue détectée : {lang1}")
+            else :
+                st.write(f"Langue détectée : {lang2}")
+            
             
             # Traduire le texte en fonction de la langue détectée
-            if detected_lang == 'Français':
+            if detected_lang == 'fr':
                 translated_text = GoogleTranslator(source='fr', target='en').translate(user_input)
                 st.write(f"Texte traduit en anglais : {translated_text}")
-            elif detected_lang == 'Englais':
+            elif detected_lang == 'en':
                 translated_text = GoogleTranslator(source='en', target='fr').translate(user_input)
                 st.write(f"Texte traduit en français : {translated_text}")
             else:
@@ -124,7 +130,7 @@ if st.button("Prédire le sentiment"):
             
             # Créer un diagramme circulaire
             fig, ax = plt.subplots()
-            ax.pie(proba, labels=labels_fr, autopct='%1.1f%%', colors=['red', 'blue', 'green'])
+            ax.pie(proba, labels=labels_fr, autopct='%1.1f%%', colors=['red', 'white', 'green'])
             ax.set_title('Répartition des sentiments')
             st.pyplot(fig)
             
