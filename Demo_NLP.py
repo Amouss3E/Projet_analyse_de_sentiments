@@ -85,10 +85,10 @@ if st.button("Prédire le sentiment"):
             st.write(f"Langue détectée : {detected_lang}")
             
             # Traduire le texte en fonction de la langue détectée
-            if detected_lang == 'fr':
+            if detected_lang == 'Français':
                 translated_text = GoogleTranslator(source='fr', target='en').translate(user_input)
                 st.write(f"Texte traduit en anglais : {translated_text}")
-            elif detected_lang == 'en':
+            elif detected_lang == 'Englais':
                 translated_text = GoogleTranslator(source='en', target='fr').translate(user_input)
                 st.write(f"Texte traduit en français : {translated_text}")
             else:
