@@ -82,12 +82,9 @@ if st.button("Prédire le sentiment"):
         try:
             # Détecter la langue du texte avec langdetect
             detected_lang = detect(user_input)
-            lang1 = 'Français'
-            lang2 = 'Englais'
-            if detected_lang == 'fr':
-                st.write(f"Langue détectée : {lang1}")
-            else :
-                st.write(f"Langue détectée : {lang2}")
+            
+            st.write(f"Langue détectée : {detected_lang}")
+            
             
             
             # Traduire le texte en fonction de la langue détectée
