@@ -130,7 +130,7 @@ if st.button("Prédire le sentiment"):
             
             # Créer un diagramme circulaire
             fig, ax = plt.subplots()
-            ax.pie(proba, labels=labels_fr, autopct='%1.1f%%', colors=['red', 'white', 'green'])
+            ax.pie(proba, labels=labels_fr, autopct='%1.1f%%', colors=['red', 'blue', 'green'])
             ax.set_title('Répartition des sentiments')
             st.pyplot(fig)
             
