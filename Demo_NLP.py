@@ -54,10 +54,8 @@ vectorizer = joblib.load('tfidf_vectorizer_LGBMC.pkl')
 st.title("Démonstration de prédiction de sentiment")
 
 # Afficher les noms des membres de l'équipe
-st.write("**Membres de l'équipe :**")
+st.write("**AUTEUR :**")
 st.write("- AMOUSSOU Eli Enock Emalin")
-st.write("- DOHOUN Amoin Maeva")
-st.write("- YEO Ditchaba")
 
 # Description des données d'entraînement
 st.write("""
